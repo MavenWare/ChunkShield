@@ -1,4 +1,6 @@
 # ChunkShield
 Lightweight Protection for entity/block limits per chunk.
 
-https://github.com/SintaxLabs/ChunkShield/blob/main/repo/chunkshield-comparison.png
+
+
+![ChunkShield Comparison Sheet]([http://url/to/img.png](https://github.com/SintaxLabs/ChunkShield/blob/main/repo/chunkshield-comparison.png))
