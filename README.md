@@ -3,8 +3,6 @@ Feature-Rich Lightweight Protection for entity/block limits per chunk, including
 
 Supports: 1.21.x
 
-*Backport Requests will cost $20 and will be made public upon release as my guarantee.*
-
 ## "But Paper/Spigot already do this"
 > - Chunkshield precisely aims to address the areas that Paper/Spigot neglect.
 > - Where ClearLagg failed, ChunkShield succeeds.
