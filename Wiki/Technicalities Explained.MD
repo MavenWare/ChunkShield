@@ -1,4 +1,4 @@
-This document is meant to be transparent on how our checks are performed.
+*This document is meant to be transparent on how our checks are performed.*
 
 
 Check 1 - 60 Second Chunk Scans
