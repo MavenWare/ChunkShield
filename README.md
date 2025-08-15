@@ -8,7 +8,8 @@ Supports: 1.21.x
 > - Where ClearLagg failed, ChunkShield succeeds.
 > - We cut all the useless bloat and focus on what server owners specifically need.
 
-<img width="478" height="380" alt="chunkshield-comparison" src="https://github.com/user-attachments/assets/fb2cccc7-e1c4-49e4-95ba-e6fe62719f88" />
+<img width="1185" height="1044" alt="chunkshield-comparison1" src="https://github.com/user-attachments/assets/c844361e-b8e1-446b-919e-37edceda1cd5" />
+
 
 ## Simplicity
 You only need one command: */cshield reload*
