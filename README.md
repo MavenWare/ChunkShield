@@ -5,7 +5,7 @@ Supports: 1.21.x
 
 ## "But Paper/Spigot already do this"
 Think of ChunkShield as an extension for Paper/Spigot. 
-- Chunkshield precisely aims to address the areas that Paper/Spigot neglect.
+- Chunkshield addresses aspects that Paper/Spigot neglect.
 - Where ClearLagg failed, ChunkShield succeeds.
 - We cut all the useless bloat and focus on what server owners specifically need.
 
@@ -13,11 +13,9 @@ Think of ChunkShield as an extension for Paper/Spigot.
 
 
 ## Simplicity
-You only need one command: */cshield reload*
-
-No unnecessary commands that take hours to setup like ClearLagg.
-
-Permissions not necessary except to reload.
+- ChunkShield is straight to the point!
+- Only need one command: */cshield reload*
+- Only need one permission: *chunkshield.reload*
 
 ## Features
 > - Limit Certain Blocks within a Chunk.
