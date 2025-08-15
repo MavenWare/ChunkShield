@@ -1,5 +1,5 @@
 # ChunkShield
-Feature-Rich Lightweight Protection for entity/block limits per chunk, including named entities.
+Feature Rich Lightweight Chunk Protection that limits mobs, named mobs, blocks, entities, and entities in bulk.
 
 ## Versions
 - 1.21.x
