@@ -21,6 +21,7 @@ Permissions not necessary except to reload.
 
 ## Features
 > - Chunk Block Limitation
+> - Collective Limiting such as all boats/rafts and all minecarts.
 > - Chunk Entity Limitation
 > - Chunk Named Entity Limitation
 > - Configuration that is straight to the point and doesn't take a wiki to find...
