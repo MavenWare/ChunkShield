@@ -20,11 +20,13 @@ No unnecessary commands that take hours to setup like ClearLagg.
 Permissions not necessary except to reload.
 
 ## Features
-> - Chunk Block Limitation
-> - Collective Limiting such as all boats/rafts and all minecarts.
-> - Chunk Entity Limitation
-> - Chunk Named Entity Limitation
-> - Configuration that is straight to the point and doesn't take a wiki to find...
+> - Limit Certain Blocks within a Chunk.
+> - Limit All Boats / All Minecart within a Chunk.
+> - Limit Certain Entities within a Chunk.
+> - Limit Certain Named Entities within a Chunk.
+> - Automatic Protection/Priority over Named Entities.
+> - Configuration that does not require a Google Search to understand.
+> - Drop and Go Ready! Default Config does not interfere with vanilla gameplay.
 > - Lightweight, all checks are made with performance in mind.
 
 ## Our Message
