@@ -4,9 +4,10 @@ Feature-Rich Lightweight Protection for entity/block limits per chunk, including
 Supports: 1.21.x
 
 ## "But Paper/Spigot already do this"
-> - Chunkshield precisely aims to address the areas that Paper/Spigot neglect.
-> - Where ClearLagg failed, ChunkShield succeeds.
-> - We cut all the useless bloat and focus on what server owners specifically need.
+Think of ChunkShield as an extension for Paper/Spigot. 
+- Chunkshield precisely aims to address the areas that Paper/Spigot neglect.
+- Where ClearLagg failed, ChunkShield succeeds.
+- We cut all the useless bloat and focus on what server owners specifically need.
 
 <img width="550" height="520" alt="chunkshield-comparison1" src="https://github.com/user-attachments/assets/c844361e-b8e1-446b-919e-37edceda1cd5" />
 
