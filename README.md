@@ -10,8 +10,7 @@ Think of ChunkShield as an extension for Paper/Spigot.
 - Where ClearLagg failed, ChunkShield succeeds.
 - We cut all the useless bloat and focus on what server owners specifically need.
 
-<img width="550" height="520" alt="chunkshield-comparison1" src="https://github.com/user-attachments/assets/c844361e-b8e1-446b-919e-37edceda1cd5" />
-
+<img width="561" height="494" alt="chunkshield-comparison1" src="https://github.com/user-attachments/assets/72fc16c2-ea01-48c3-b641-1ead17b16402" />
 
 ## Simplicity
 - ChunkShield is straight to the point!
