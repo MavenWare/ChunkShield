@@ -21,7 +21,7 @@ This has no impact on performance due to simply there being no additional work t
 
 
 # Check 3 - Mob Spawning
-Everytime a mob spawns, a check is made. 
+Every time a mob spawns, a check is made. 
 
 Just like Check 2, the first criteria is checking the limit of mobs in said chunk is under. 
 
