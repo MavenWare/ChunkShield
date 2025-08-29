@@ -1,0 +1,184 @@
+#-----------------------------------------------#
+#                   ChunkShield                 #
+#                                               #
+#                   Sintax Labs                 #
+#-----------------------------------------------#
+# This config provides every single item and mob.
+# You are safe to remove or edit any value.
+# Simply reload the config with /cshield reload
+
+
+###############################
+#      Collective Checks      #
+###############################
+# This sets a PER Chunk Limit of all boats or all doors/trapdoors or all boats/chestboats/rafts.
+# Future Proof so no need to add new items.
+
+# There are 37 doors in total, including all copper level doors and trapdoors.
+collective-door-limit: 60
+# There are 20 boats in total, including the recent rafts.
+collective-boat-limit: 20
+# There are 5 minecarts in total.
+collective-minecart-limit: 20
+
+
+###############################
+#     Named Entity Limits     #
+###############################
+# Named Entity limits PER chunk.
+# These are separate from unnamed entities.
+# These ADD onto the total of a mob. EX: 5 named and 2 unnamed are 7.
+named-entity-limits:
+  CAT: 5
+  FROG: 5
+  WOLF: 5
+  HORSE: 5
+  DONKEY: 5
+  VILLAGER: 20
+
+
+###############################
+#        Entity Limits        #
+###############################
+# Individual entity limits PER chunk.
+entity-limits:
+
+  # Default: 1000, Protects items from large amounts of chests getting destroyed.
+  DROPPED_ITEM: 1000
+
+  ############ Boats ############
+  # Boats are pointless due to Collective-Boat-Checks taking care of all possible boats/chest-boats/rafts.
+  # You can remove this portion if you prefer, but I leave as an example.
+  OAK_BOAT: 10
+  OAK_CHEST_BOAT: 10
+  BAMBOO_RAFT: 10
+  BAMBOO_CHEST_RAFT: 10
+
+  ############ Items ############
+  ARROW: 10
+  ARMOR_STAND: 16
+  EGG: 10
+  EXPERIENCE_ORB: 25
+  FALLING_BLOCK: 25
+  FIREBALL: 3
+  FIREWORK_ROCKET: 5
+  ITEM_FRAME: 128
+  GLOW_ITEM_FRAME: 128
+  LLAMA_SPIT: 3
+  LEASH_KNOT: 20
+  PAINTING: 32
+  PRIMED_TNT: 1
+  SHULKER_BULLET: 8
+  SNOWBALL: 10
+  TRIDENT: 10
+
+  ############ Mobs ############
+  ALLAY: 20
+  ARMADILLO: 20
+  AXOLOTL: 20
+  BAT: 20
+  BEE: 32
+  BLAZE: 16
+  BOGGED: 16
+  BREEZE: 16
+  CAMEL: 20
+  CAT: 20
+  CAVE_SPIDER: 16
+  CHICKEN: 32
+  COD: 20
+  COW: 32
+  CREEPER: 16
+  DOLPHIN: 20
+  DONKEY: 20
+  DROWNED: 16
+  ENDER_DRAGON: 1
+  ENDERMAN: 16
+  EVOKER: 10
+  FOX: 20
+  FROG: 20
+  GHAST: 5
+  GIANT: 0
+  GLOW_SQUID: 20
+  GOAT: 16
+  GUARDIAN: 1
+  HOGLIN: 16
+  HORSE: 32
+  HUSK: 16
+  ILLUSIONER: 0
+  IRON_GOLEM: 16
+  LLAMA: 20
+  MAGMA_CUBE: 20
+  MOOSHROOM: 32
+  MULE: 32
+  OCELOT: 20
+  PANDA: 20
+  PARROT: 20
+  PHANTOM: 1
+  PIG: 32
+  PIGLIN: 32
+  PIGLIN_BRUTE: 10
+  PILLAGER: 16
+  POLAR_BEAR: 20
+  PUFFERFISH: 20
+  RABBIT: 20
+  RAVAGER: 4
+  SALMON: 20
+  SHEEP: 32
+  SHULKER: 30
+  SILVERFISH: 16
+  SKELETON: 16
+  SKELETON_HORSE: 4
+  SLIME: 20
+  SNIFFER: 20
+  SNOW_GOLEM: 10
+  SPIDER: 16
+  STRAY: 16
+  STRIDER: 20
+  TADPOLE: 20
+  TROPICAL_FISH: 20
+  TURTLE: 20
+  VEX: 5
+  VILLAGER: 32
+  VINDICATOR: 16
+  WANDERING_TRADER: 4
+  WARDEN: 1
+  WITHER: 1
+  ZOMBIE: 16
+  ZOMBIE_HORSE: 16
+  ZOMBIE_VILLAGER: 16
+  ZOMBIFIED_PIGLIN: 16
+
+
+###############################
+#         Block Limits        #
+###############################
+# The amount of block items that can be in one chunk.
+# NOTE: Doors are two entities in one so multiply your limit by 2.
+block-limits:
+  ANVIL: 12
+  CHIPPED_ANVIL: 12
+  DAMAGED_ANVIL: 12
+  BEACON: 16
+  CAMPFIRE: 64
+  SOUL_CAMPFIRE: 64
+  CHEST: 200
+  TRAPPED_CHEST: 200
+  CRAFTING_TABLE: 32
+  ENCHANTING_TABLE: 3
+  FURNACE: 32
+  HOPPER: 32
+  PISTON: 32
+  STICKY_PISTON: 32
+  REPEATER: 20
+  COMPARATOR: 20
+  REDSTONE_WIRE: 100
+  # Good for preventing Wither Spawns
+  #WITHER_SKELETON_SKULL: 0
+
+  ############ Doors ############
+  # Doors are pointless due to Collective-Door-Checks taking care of all possible door/trapdoors in total.
+  # You can remove this portion if you prefer, but I leave as an example.
+  OAK_DOOR: 32
+  OAK_TRAP_DOOR: 16
+
+
