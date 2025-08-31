@@ -1,7 +1,7 @@
 This list contains every entity in Minecraft.
 
 # Items
-These are static entities to be aware of.
+These are non-creature entities to be aware of.
 
 - ARROW
 - ARMOR_STAND
