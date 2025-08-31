@@ -1,8 +1,8 @@
 *This document is meant to be transparent on how our checks are performed.*
 
 
-# Check 1 - 60 Second Chunk Scans
-60 second scans are performed in case mobs or other entities such as boats move or get pushed into a chunk.
+# Check 1 - Chunk Scans
+Chunks are scanned upon being loaded in case mobs or other entities such as boats move or get pushed into a chunk.
 
 The first criteria checked is if any listed items are over limit, if not, the scan for that chunk is complete. 
 
