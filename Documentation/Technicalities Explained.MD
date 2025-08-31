@@ -1,7 +1,7 @@
 *This document is meant to be transparent on how our checks are performed.*
 
 
-# Check 1 - Chunk Scans
+# ~~Check 1 - Chunk Scans
 Chunks are scanned upon being loaded in case mobs or other entities such as boats move or get pushed into a chunk.
 
 The first criteria checked is if any listed items are over limit, if not, the scan for that chunk is complete. 
@@ -9,7 +9,9 @@ The first criteria checked is if any listed items are over limit, if not, the sc
 This has near zero impact due to all following checks keeping things in balance. 
 
 ## You may ask, why not only do the chunks the players are in?
-Scans could easily be bypassed if players send boats or mobs from a distance.
+Scans could easily be bypassed if players send boats or mobs from a distance.~~
+
+Check 1 is being reevaluated.
 
 
 # Check 2 - Block Placement
