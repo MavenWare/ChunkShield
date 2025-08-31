@@ -5,6 +5,7 @@ These are non-creature entities to be aware of.
 
 - ARROW
 - ARMOR_STAND
+- DROPPED_ITEM (Items on the ground)
 - EGG
 - EXPERIENCE_ORB
 - FALLING_BLOCK
