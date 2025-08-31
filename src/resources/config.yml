@@ -1,0 +1,118 @@
+#-----------------------------------------------#
+#                   ChunkShield                 #
+#                                               #
+#                   Sintax Labs                 #
+#-----------------------------------------------#
+# These are the default settings for ChunkShield.
+# You are safe to remove or edit any value.
+# Reload with /cshield reload
+
+
+###############################
+#      Collective Checks      #
+###############################
+# PER Chunk Limit of all boats or all doors/trapdoors or all boats/chestboats/rafts.
+
+# There are 37 doors in total, including all copper level doors and trapdoors.
+collective-door-limit: 40
+# There are 20 boats in total, including the recent rafts.
+collective-boat-limit: 20
+# There are 5 minecarts in total.
+collective-minecart-limit: 20
+
+
+###############################
+#         Block Limits        #
+###############################
+# The amount of block items that can be in one chunk.
+# NOTE: Doors are two entities in one so multiply your limit by 2.
+block-limits:
+  ANVIL: 12
+  CHIPPED_ANVIL: 12
+  DAMAGED_ANVIL: 12
+  BEACON: 16
+  CAMPFIRE: 64
+  SOUL_CAMPFIRE: 64
+  CHEST: 200
+  TRAPPED_CHEST: 200
+  ENCHANTING_TABLE: 3
+  HOPPER: 32
+  PISTON: 32
+  STICKY_PISTON: 32
+  REPEATER: 20
+  COMPARATOR: 20
+  REDSTONE_WIRE: 100
+  # Good for preventing Wither Spawns
+  #WITHER_SKELETON_SKULL: 0
+
+  ############ Doors ############
+  # Doors are pointless due to Collective-Door-Checks taking care of all possible door/trapdoors in total.
+  # You can remove this portion if you prefer, but I leave as an example.
+  OAK_DOOR: 32
+  OAK_TRAP_DOOR: 16
+
+
+###############################
+#     Named Entity Limits     #
+###############################
+# Named Entity limits PER chunk.
+# These are separate from unnamed entities.
+# These ADD onto the total of a mob. EX: 5 named and 2 unnamed are 7.
+named-entity-limits:
+  CAT: 5
+  FROG: 5
+  WOLF: 5
+  HORSE: 5
+  DONKEY: 5
+  VILLAGER: 20
+
+
+###############################
+#        Entity Limits        #
+###############################
+# Individual entity limits PER chunk.
+entity-limits:
+
+  # Default: 1000, Protects items from large amounts of chests getting destroyed.
+  DROPPED_ITEM: 1000
+
+  ############ Boats ############
+  # Boats are pointless due to Collective-Boat-Checks taking care of all possible boats/chest-boats/rafts.
+  # You can remove this portion if you prefer, but I leave as an example.
+  OAK_BOAT: 10
+  OAK_CHEST_BOAT: 10
+  BAMBOO_RAFT: 10
+  BAMBOO_CHEST_RAFT: 10
+
+  ############ Items ############
+  ARROW: 10
+  ARMOR_STAND: 16
+  EGG: 10
+  EXPERIENCE_ORB: 25
+  FALLING_BLOCK: 25
+  FIREBALL: 3
+  FIREWORK_ROCKET: 5
+  ITEM_FRAME: 128
+  GLOW_ITEM_FRAME: 128
+  LLAMA_SPIT: 3
+  LEASH_KNOT: 20
+  PAINTING: 32
+  PRIMED_TNT: 1
+  SHULKER_BULLET: 8
+  SNOWBALL: 10
+  TRIDENT: 10
+
+  ############ Mobs ############
+  ENDER_DRAGON: 1
+  GIANT: 0
+  GUARDIAN: 1
+  ILLUSIONER: 0
+  PHANTOM: 1
+  RAVAGER: 4
+  SNOW_GOLEM: 10
+  VEX: 5
+  VILLAGER: 32
+  WARDEN: 1
+  WITHER: 1
+
+
