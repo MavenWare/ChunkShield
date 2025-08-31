@@ -1,4 +1,5 @@
-This list contains every entity in Minecraft.
+## This list contains every entity in Minecraft.
+For the latest technical entity list, go [here.](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
 
 # Items
 These are non-creature entities to be aware of.
