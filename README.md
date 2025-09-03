@@ -28,7 +28,7 @@ Think of ChunkShield as an extension for Paper/Spigot.
 - Lightweight, all checks are made with performance in mind.
 
 ## Our Message
-ClearLagg's complete incompetence left a bad taste and a lot of misinformation, preventing future security development and putting thousands of servers at risk.
+ClearLagg's overreach left a bad taste and a lot of misinformation, preventing future security development and putting thousands of servers at risk.
 
 A lot of server owners are brushed away from needing additional security and are gaslit to put up with Paper/Spigot.
 
