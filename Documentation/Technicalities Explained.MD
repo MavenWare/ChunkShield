@@ -39,7 +39,7 @@ There are three optional events that can also trigger a chunk scan.
 
 They are disabled by default but have a 10% chance to trigger.
 
-They run off the same 5 Criteria that Measure 1 operates by.
+They run off the same six Criteria that Measure 1 operates by.
 
 - PlayerCraftEvent
 - MobDeathEvent
