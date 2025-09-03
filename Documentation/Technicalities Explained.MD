@@ -8,25 +8,37 @@ When a chunk is loaded, it has to meet a criteria before getting scanned for ent
 - 3. Are there the minimum amount of entities set by the player met?
 - 4. Are the entity lists in the config empty?
 - 5. Finally, are the listed entities even in the chunk?
+
 Once we can confirm these five criteria are met then the chunk will be scanned. 
 
 
 # Measure 2 - Block Placement
-Every time a block is placed, a check is made. 
-
-The first criteria is if said block is illegal, 99% of the time, no.
-
-This has no impact on performance due to simply there being no additional work to be done.
+To be updated. 
 
 
-# Measure 3 - Mob Spawning
-Every time a mob spawns, a check is made. 
+# Measure 3 - Entity Spawning
+Every time an entity spawns or a projectile is flung, the chunk it occured in is scanned if it meets the following:
+- 1. Is it Enabled?
+- 2. Are there the minimum amount of entities set by the player met?
+- 3. Are the entity lists in the config empty?
+- 4. Finally, are the listed entities even in the chunk?
 
-Just like Check 2, the first criteria is checking the limit of mobs in said chunk is under. 
+Once all four criteria are met, the scan will be made and perform as needed. 
 
-If so, the check is immediately done. 
+# Measure 4 - Boat/Minecart Limitation
+While a boat or minecart is moving or gets placed, a check is made for how many other boats and minecarts are in the vicinity.
 
+The limit and the vicinity range are set by you. 
 
-# Measure 4 - Boat/Minecart Placement
-Just as before, no actual impact is done to the server except for blocking the placement if the limit is reached.
+Default: 20 Vechicles can only exist in a 32 block range. 
 
+# Measure 5 - Optional Miscellaneous Scans
+There are three optional events that can also trigger a chunk scan. 
+
+They are disabled by default but have a 10% chance to trigger.
+
+They run off the same 5 Criteria that Measure 1 operates by.
+
+- PlayerCraftEvent
+- MobDeathEvent
+- ContainerOpenEvent
