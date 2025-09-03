@@ -19,11 +19,10 @@ Think of ChunkShield as an extension for Paper/Spigot.
 
 ## Features
 - Limit Certain Blocks within a Chunk.
-- Limit All Boats / All Minecart within a Chunk.
 - Limit Certain Entities within a Chunk.
 - Limit Certain Named Entities within a Chunk.
+- Radius Limit for Boats/Rafts/Minecarts
 - Automatic Protection/Priority over Named Entities.
-- Configuration that does not require a Google Search to understand.
 - Drop and Go Ready! Default Config does not interfere with vanilla gameplay.
 - Lightweight, all checks are made with performance in mind.
 
