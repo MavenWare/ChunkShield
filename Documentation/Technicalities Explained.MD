@@ -3,12 +3,12 @@
 
 # Measure 1 - Chunk Scan Upon Loading
 When a chunk is loaded, it has to meet a criteria before getting scanned for entities.
-- 1. Is it Enabled?
-- 2. Is it a new chunk? If not, continue. 
-- 3. Are there any entities at all?
-- 4. Are there the minimum amount of entities set by the player met?
-- 5. Are the entity lists in the config empty?
-- 6. Finally, are the listed entities even in the chunk?
+- Is it Enabled?
+- Is it a new chunk? If not, continue. 
+- Are there any entities at all?
+- Are there the minimum amount of entities set by the player met?
+- Are the entity lists in the config empty?
+- Finally, are the listed entities even in the chunk?
 
 Once we can confirm these six criteria are met then the chunk will be scanned. 
 
@@ -19,11 +19,11 @@ To be updated.
 
 # Measure 3 - Entity Spawning
 Every time an entity spawns or a projectile is flung, the chunk it occured in is scanned if it meets the following:
-- 1. Is it Enabled?
-- 2. Is it a new chunk? If not, continue.
-- 3. Are there the minimum amount of entities set by the player met?
-- 4. Are the entity lists in the config empty?
-- 5. Finally, are the listed entities even in the chunk?
+- Is it Enabled?
+- Is it a new chunk? If not, continue.
+- Are there the minimum amount of entities set by the player met?
+- Are the entity lists in the config empty?
+- Finally, are the listed entities even in the chunk?
 
 Once all four criteria are met, the scan will be made and perform as needed. 
 
