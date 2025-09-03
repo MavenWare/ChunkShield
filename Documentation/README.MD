@@ -10,7 +10,7 @@ You can find all necessary information here. Missing something? Let me know.
 
 ### Why should people even bother adding this?
 - ChunkShield is meant to be dropped and forgotten. It prevents varying ways that someone could spam to lag or crash your server.
-- Spam mitigation is left solely up to the server owner as Spigot and Mojang have no default barriers.
+- Spam mitigation is left solely up to the server owner as Spigot and Mojang have no default ready-made barriers.
 
 ### I don't want XYZ feature.
 - You can toggle all features on or off.
