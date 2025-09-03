@@ -3,7 +3,7 @@ You can find all necessary information here. Missing something? Let me know.
 # FAQ
 
 ### Will this lag my server?
-- No. There are multiple conditions added**(as of 1.0.1)** that have to be met for a chunk to get scanned.
+- No. There are multiple conditions added(as of 1.0.1) that have to be met for a chunk to get scanned.
 
 ### Do you still have the old Scheduled Chunk Scanning?
 - No. Chunk Scanning is no longer scheduled and will not scan all loaded chunks going forward.
