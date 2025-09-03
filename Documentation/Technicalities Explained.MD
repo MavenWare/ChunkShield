@@ -14,7 +14,11 @@ Once we can confirm these six criteria are met then the chunk will be scanned.
 
 
 # Measure 2 - Block Placement
-To be updated. 
+Block placement runs a quick scan over the chunk for any illegal blocks.
+
+Like every measure here, you can also limit this one by 50% chance to run if you really prefer.
+
+It does not have any impact on the server.
 
 
 # Measure 3 - Entity Spawning
