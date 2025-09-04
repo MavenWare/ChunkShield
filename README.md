@@ -1,3 +1,7 @@
+Drop a ⭐ to support and stay up to date!
+
+Consider [donating](https://ko-fi.com/jammerz), no pressure 🩷
+#
 # ChunkShield
 Feature Rich Lightweight Chunk Protection that limits mobs, named mobs, blocks, entities, and entities in bulk.
 
