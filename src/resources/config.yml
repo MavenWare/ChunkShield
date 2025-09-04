@@ -3,22 +3,50 @@
 #                                               #
 #                   Sintax Labs                 #
 #-----------------------------------------------#
-# These are the default settings for ChunkShield.
-# You are safe to remove or edit any value.
-# Reload with /cshield reload
 
+# Check LINK for how ChunkShield maintains server health.
+
+###############################
+#        Configuration        #
+###############################
+
+# A HUGE CPU Saver. Minimum Threshold to justify checking a chunk at all.
+# This only applies to Scan-Chunks-Upon-Loading.
+MinimumEntityRequirement: 10    # Recommend 5 - 25.
+
+# 50% Toggle cuts the checks in half if you prefer.
+# The general scan when a chunk loads.
+Scan-Chunks-Upon-Loading: true
+Scan-Chunks-Upon-Loading-50%: false
+# Checks block limit you set every time a player places a block.
+BlockCheck: true
+BlockCheck-50%: false
+# Checks entity limit upon an entity spawning.
+EntityCheck: true
+EntityCheck-50%: false
+
+# 10% Chance Random Events that can trigger a chunk scan for entities.
+Scan-Chunk-Upon-Crafting: false
+Scan-Chunk-Upon-Entity-Dying: false
+Scan-Chunk-Upon-Opening-Container: false
+
+# Prevent Server Lag/Crashing via checking vicinity limit for boats and mineCarts.
+VehicleRadiusCheck: true
+
+# Prevents End Portal Frames from getting placed. If you're fine with losing End Portal Frames, set to false then add END_PORTAL_FRAME to list.
+# This instead, prevents placement and removes any End Portal Frames found in the inventory.
+end-portal-fix: true
 
 ###############################
 #      Collective Checks      #
 ###############################
-# PER Chunk Limit of all boats or all doors/trapdoors or all boats/chestboats/rafts.
-
-# There are 37 doors in total, including all copper level doors and trapdoors.
-collective-door-limit: 40
-# There are 20 boats in total, including the recent rafts.
-collective-boat-limit: 20
-# There are 5 minecarts in total.
-collective-minecart-limit: 20
+# Collective Chunk Limit for all doors/trapdoors. There are 37 doors in total, including all copper doors and trapdoors.
+# Collective Chunk Limit for all mine carts/boats. There are 5 mine carts and 20 boats in total, including the recent rafts.
+# -1 to disable
+ChunkDoorLimit: 40
+ChunkVehicleLimit: 20
+# Block radius to allow the vehicle limit within. (More than 20 Boats cant exist within 32 blocks.)
+vehicle-radius: 32
 
 
 ###############################
@@ -26,37 +54,29 @@ collective-minecart-limit: 20
 ###############################
 # The amount of block items that can be in one chunk.
 # NOTE: Doors are two entities in one so multiply your limit by 2.
+# NOTE: Bedrock Limit will NOT remove the floor or nether roof.
 block-limits:
   ANVIL: 12
   CHIPPED_ANVIL: 12
   DAMAGED_ANVIL: 12
   BEACON: 16
+  BEDROCK: 0
   CAMPFIRE: 64
   SOUL_CAMPFIRE: 64
   CHEST: 200
   TRAPPED_CHEST: 200
-  ENCHANTING_TABLE: 3
+  ENCHANTING_TABLE: 12
   HOPPER: 32
   PISTON: 32
   STICKY_PISTON: 32
   REPEATER: 20
   COMPARATOR: 20
   REDSTONE_WIRE: 100
-  # Good for preventing Wither Spawns
-  #WITHER_SKELETON_SKULL: 0
-
-  ############ Doors ############
-  # Doors are pointless due to Collective-Door-Checks taking care of all possible door/trapdoors in total.
-  # You can remove this portion if you prefer, but I leave as an example.
-  OAK_DOOR: 32
-  OAK_TRAP_DOOR: 16
-
 
 ###############################
 #     Named Entity Limits     #
 ###############################
 # Named Entity limits PER chunk.
-# These are separate from unnamed entities.
 # These ADD onto the total of a mob. EX: 5 named and 2 unnamed are 7.
 named-entity-limits:
   CAT: 5
@@ -66,30 +86,19 @@ named-entity-limits:
   DONKEY: 5
   VILLAGER: 20
 
-
 ###############################
 #        Entity Limits        #
 ###############################
 # Individual entity limits PER chunk.
 entity-limits:
-
-  # Default: 1000, Protects items from large amounts of chests getting destroyed.
-  DROPPED_ITEM: 1000
-
-  ############ Boats ############
-  # Boats are pointless due to Collective-Boat-Checks taking care of all possible boats/chest-boats/rafts.
-  # You can remove this portion if you prefer, but I leave as an example.
-  OAK_BOAT: 10
-  OAK_CHEST_BOAT: 10
-  BAMBOO_RAFT: 10
-  BAMBOO_CHEST_RAFT: 10
+  DROPPED_ITEM: 1000    #1000 can protect items if lots of chests get destroyed.
 
   ############ Items ############
   ARROW: 10
   ARMOR_STAND: 16
   EGG: 10
   EXPERIENCE_ORB: 25
-  FALLING_BLOCK: 25
+  FALLING_BLOCK: 10
   FIREBALL: 3
   FIREWORK_ROCKET: 5
   ITEM_FRAME: 128

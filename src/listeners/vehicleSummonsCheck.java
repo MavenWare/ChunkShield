@@ -1,72 +1,118 @@
 package me.sintaxlabs.chunkShield.listeners;
 
 import me.sintaxlabs.chunkShield.main;
-import org.bukkit.Chunk;
+import net.kyori.adventure.text.Component;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.vehicle.VehicleCreateEvent;
+import org.bukkit.event.vehicle.VehicleMoveEvent;
 
-public class vehicleSummonsCheck implements Listener
+import static org.bukkit.Bukkit.getServer;
+
+public final class vehicleSummonsCheck implements Listener
 {
+    public static class vehicleGlobal
+    {
+        public static Vehicle theVehicle;
+        public static EntityType theVehicleType;
+        public static VehicleMoveEvent theMoveEvent;
+        public static VehicleCreateEvent theCreateEvent;
+        public static boolean vehicleFlagged;
+    }
+
     ////////////////////////////////////////////////////////////////////////////
     @EventHandler
-    public void onVehicleCreate(VehicleCreateEvent event)
+    public void onVehicleCreate(VehicleCreateEvent e)
     {
-        Vehicle vehicle = event.getVehicle();
-        EntityType type = vehicle.getType();
-        Chunk chunk = event.getVehicle().getLocation().getChunk();
-
-        if (main.Global.theEntityLimits.containsKey(type))
+        if (main.Global.configToggleVehicleRadiusCheck)
         {
-            int vehicleCount = 0;
-            for (Entity e : chunk.getEntities())
-            {
-                if (e.getType() == type) vehicleCount++;
-            }
+            if (main.Global.configCollectiveVehicletLimit == -1) return;
 
-            if (vehicleCount >= main.Global.theEntityLimits.get(type))
+            vehicleGlobal.theVehicle = e.getVehicle();
+            vehicleGlobal.theVehicleType = vehicleGlobal.theVehicle .getType();
+            vehicleGlobal.theCreateEvent = e;
+            vehicleRadiusScan();
+
+            if(vehicleGlobal.vehicleFlagged)
             {
-                event.setCancelled(true);
+                e.setCancelled(true);
+                vehicleGlobal.vehicleFlagged = false;
+                getServer().broadcast(Component.text("§eChunkshield§7: §6VehicleLimit was reached and prevented.") , "chunkShield.verbose");
             }
         }
-        // ---- Category totals: BOATS ----
-        if (main.Global.configCollectiveBoatLimit >= 0)
-        {
-            int total = 0;
-            for (Entity e : chunk.getEntities()) if (e instanceof Boat) total++;
+    }
 
-            int toRemove = total - main.Global.configCollectiveBoatLimit;
+    /////////////////////////////////////////////////////////////////////////////
+    @EventHandler
+    public void vehicleMoveCheck (VehicleMoveEvent e)
+    {
+        if (main.Global.configToggleVehicleRadiusCheck)
+        {
+            if (main.Global.configCollectiveVehicletLimit == -1) return;
+
+            vehicleGlobal.theVehicle = e.getVehicle();
+            vehicleGlobal.theVehicleType = vehicleGlobal.theVehicle .getType();
+            vehicleGlobal.theMoveEvent = e;
+
+            vehicleRadiusScan();
+            if(vehicleGlobal.vehicleFlagged)
+            {
+                cleanupProcess();
+                vehicleGlobal.vehicleFlagged = false;
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////
+    private void vehicleRadiusScan()
+    {
+        int count = 0;
+
+        for (Entity entity : vehicleGlobal.theVehicle.getNearbyEntities(main.Global.configRadiusLimit, main.Global.configRadiusLimit, main.Global.configRadiusLimit))
+        {
+            if (entity instanceof Minecart) count++;
+            else if (entity instanceof Boat) count++;
+        }
+        if (count >= main.Global.configCollectiveVehicletLimit) vehicleGlobal.vehicleFlagged = true;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////
+    private static void cleanupProcess()
+    {
+        // ---- Category totals: BOATS & MINE CARTS
+        if (main.Global.configCollectiveVehicletLimit > 0)
+        {
+            int total = 1;
+            for (Entity entity : vehicleGlobal.theVehicle.getNearbyEntities(main.Global.configRadiusLimit, main.Global.configRadiusLimit, main.Global.configRadiusLimit))
+            {
+                if (entity instanceof Boat || entity instanceof Minecart) total++;
+            }
+
+            int toRemove = total - main.Global.configCollectiveVehicletLimit;
             if (toRemove > 0)
             {
-                for (Entity e : chunk.getEntities())
+                for (Entity entity : vehicleGlobal.theVehicle.getNearbyEntities(main.Global.configRadiusLimit, main.Global.configRadiusLimit, main.Global.configRadiusLimit))
                 {
-                    if (e instanceof Boat) {
-                        e.remove();
+                    if (entity instanceof Boat || entity instanceof Minecart)
+                    {
+                        getServer().broadcast(Component.text("§eChunkshield§7: §6Removed vehicle.") , "chunkShield.verbose");
+                        entity.remove();
                         if (--toRemove == 0) break; // don't return; let minecart check run
                     }
                 }
             }
         }
-
-        // ---- Category totals: MINECARTS ----
-        if (main.Global.configCollectiveMinecartLimit >= 0)
-        {
-            int total = 0;
-            for (Entity e : chunk.getEntities()) if (e instanceof Minecart) total++;
-
-            int toRemove = total - main.Global.configCollectiveMinecartLimit;
-            if (toRemove > 0)
-            {
-                for (Entity e : chunk.getEntities())
-                {
-                    if (e instanceof Minecart)
-                    {
-                        e.remove();
-                        if (--toRemove == 0) break;
-                    }
-                }
-            }
-        }
     }
+
+
+
+
+
+
+
+
+
+
+
 }

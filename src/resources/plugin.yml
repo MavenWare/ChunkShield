@@ -1,5 +1,5 @@
 name: ChunkShield
-version: '1.0-1.21.5'
+version: '1.0.1'
 main: me.sintaxlabs.chunkShield.main
 api-version: '1.21'
 
@@ -11,6 +11,9 @@ commands:
     permission: chunkshield.reload
 
 permissions:
-  chunkshield.reload:
+  chunkShield.reload:
     description: Allows user to reload the ChunkShield plugin.
+    default: op
+  chunkShield.verbose:
+    description: Allows user to see messages confirming events.
     default: op
