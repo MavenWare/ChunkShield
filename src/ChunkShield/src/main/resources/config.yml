@@ -1,0 +1,127 @@
+#-----------------------------------------------#
+#                   ChunkShield                 #
+#                                               #
+#                   Sintax Labs                 #
+#-----------------------------------------------#
+
+# Check LINK for how ChunkShield maintains server health.
+
+###############################
+#        Configuration        #
+###############################
+
+# A HUGE CPU Saver. Minimum Threshold to justify checking a chunk at all.
+# This only applies to Scan-Chunks-Upon-Loading.
+MinimumEntityRequirement: 10    # Recommend 5 - 25.
+
+# 50% Toggle cuts the checks in half if you prefer.
+# The general scan when a chunk loads.
+Scan-Chunks-Upon-Loading: true
+Scan-Chunks-Upon-Loading-50%: false
+# Checks block limit you set every time a player places a block.
+BlockCheck: true
+BlockCheck-50%: false
+# Checks entity limit upon an entity spawning.
+EntityCheck: true
+EntityCheck-50%: false
+
+# 10% Chance Random Events that can trigger a chunk scan for entities.
+Scan-Chunk-Upon-Crafting: false
+Scan-Chunk-Upon-Entity-Dying: false
+Scan-Chunk-Upon-Opening-Container: false
+
+# Prevent Server Lag/Crashing via checking vicinity limit for boats and mineCarts.
+VehicleRadiusCheck: true
+
+# Prevents End Portal Frames from getting placed. If you're fine with losing End Portal Frames, set to false then add END_PORTAL_FRAME to list.
+# This instead, prevents placement and removes any End Portal Frames found in the inventory.
+end-portal-fix: true
+
+###############################
+#      Collective Checks      #
+###############################
+# Collective Chunk Limit for all doors/trapdoors. There are 37 doors in total, including all copper doors and trapdoors.
+# Collective Chunk Limit for all mine carts/boats. There are 5 mine carts and 20 boats in total, including the recent rafts.
+# -1 to disable
+ChunkDoorLimit: 40
+ChunkVehicleLimit: 20
+# Block radius to allow the vehicle limit within. (More than 20 Boats cant exist within 32 blocks.)
+vehicle-radius: 32
+
+
+###############################
+#         Block Limits        #
+###############################
+# The amount of block items that can be in one chunk.
+# NOTE: Doors are two entities in one so multiply your limit by 2.
+# NOTE: Bedrock Limit will NOT remove the floor or nether roof.
+block-limits:
+  ANVIL: 12
+  CHIPPED_ANVIL: 12
+  DAMAGED_ANVIL: 12
+  BEACON: 16
+  BEDROCK: 0
+  CAMPFIRE: 64
+  SOUL_CAMPFIRE: 64
+  CHEST: 200
+  TRAPPED_CHEST: 200
+  ENCHANTING_TABLE: 12
+  HOPPER: 32
+  PISTON: 32
+  STICKY_PISTON: 32
+  REPEATER: 20
+  COMPARATOR: 20
+  REDSTONE_WIRE: 100
+
+###############################
+#     Named Entity Limits     #
+###############################
+# Named Entity limits PER chunk.
+# These ADD onto the total of a mob. EX: 5 named and 2 unnamed are 7.
+named-entity-limits:
+  CAT: 5
+  FROG: 5
+  WOLF: 5
+  HORSE: 5
+  DONKEY: 5
+  VILLAGER: 20
+
+###############################
+#        Entity Limits        #
+###############################
+# Individual entity limits PER chunk.
+entity-limits:
+  DROPPED_ITEM: 1000    #1000 can protect items if lots of chests get destroyed.
+
+  ############ Items ############
+  ARROW: 10
+  ARMOR_STAND: 16
+  EGG: 10
+  EXPERIENCE_ORB: 25
+  FALLING_BLOCK: 10
+  FIREBALL: 3
+  FIREWORK_ROCKET: 5
+  ITEM_FRAME: 128
+  GLOW_ITEM_FRAME: 128
+  LLAMA_SPIT: 3
+  LEASH_KNOT: 20
+  PAINTING: 32
+  PRIMED_TNT: 1
+  SHULKER_BULLET: 8
+  SNOWBALL: 10
+  TRIDENT: 10
+
+  ############ Mobs ############
+  ENDER_DRAGON: 1
+  GIANT: 0
+  GUARDIAN: 1
+  ILLUSIONER: 0
+  PHANTOM: 1
+  RAVAGER: 4
+  SNOW_GOLEM: 10
+  VEX: 5
+  VILLAGER: 32
+  WARDEN: 1
+  WITHER: 1
+
+
