@@ -6,7 +6,8 @@ Consider [donating](https://ko-fi.com/jammerz), no pressure 🩷
 Feature Rich Lightweight Chunk Protection that limits mobs, named mobs, blocks, entities, and entities in bulk.
 
 ## Versions
-- 1.21.x
+- 1.18 ~ 1.21.x
+- 1.16 ~ 1.17
 
 ## "But Paper/Spigot already do this"
 Think of ChunkShield as an extension for Paper/Spigot. 
@@ -17,9 +18,8 @@ Think of ChunkShield as an extension for Paper/Spigot.
 <img width="561" height="494" alt="chunkshield-comparison1" src="https://github.com/user-attachments/assets/72fc16c2-ea01-48c3-b641-1ead17b16402" />
 
 ## Simplicity
-- ChunkShield is straight to the point!
-- Only need one command: */cshield reload*
-- Only need one permission: *chunkshield.reload*
+- ChunkShield offers all the protections you could want.
+- No unnecessary or obscure features that inadvertently put your server at risk.
 
 ## Features
 - Limit Certain Blocks within a Chunk.
