@@ -44,6 +44,7 @@ By default, there can be no more than 20 boats and minecarts altogether within a
 
 - end-portal-fix: true
 > This blocks End Portal Frames by default and also allows users to still place ender eyes in the frame without getting blocked.
+> 
 > Recommend never disabling this as there is no need to.
 
 - ChunkScanned: true
@@ -63,4 +64,5 @@ Simply list your item in their respective category.
 
 Please make sure you're aware of what goes where.
 > Chests are blocks, Armor Stands are entities, Redstone Wire is technically a block.
+> 
 > ETC
