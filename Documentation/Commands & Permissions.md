@@ -1,7 +1,7 @@
 # ChunkShield Commands & Permissions
 You can find the following commands and permissions below.
 
-## Commands
+# Commands
 ### /cshield reload
 - Reloads the config file.
 - Requires *chunkshield.reload* perm.
@@ -10,7 +10,7 @@ You can find the following commands and permissions below.
 - Shows the stats of every removal or incident since the last restart.
 - Requires *chunkshield.stats* perm.
 
-## Permissions
+# Permissions
 By default, all permissions are provided to Operators.
 ### chunkshield.alerts
 - Users with this perm can see all alerts that are toggled for various events.
