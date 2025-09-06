@@ -1,6 +1,6 @@
 <img width="1280" height="460" alt="CS-Wallpaper" src="https://github.com/user-attachments/assets/923d1c41-565c-4fc8-9713-67436268654a" />
 
-Chunk Protection that limits mobs, named mobs, blocks, entities of your choice.
+> Chunk Protection that limits mobs, named mobs, blocks, entities of your choice.
 
 Drop a ⭐ to support and stay up to date!
 
