@@ -10,8 +10,7 @@ Consider [donating](https://ko-fi.com/jammerz), no pressure 🩷
 ## Support
 | MC Version    | API  | Support |
 | :---------:   | :-:  | :-----: |
-| 1.16 - 1.17   | 1.16 |  ⛔ |
-| 1.18 - 1.21.x | 1.18 |  ✅ |
+| 1.16.5 - 1.21.x | 1.16 |  ✅ |
 > Read more on how we update [here.](https://github.com/eh-K/Spigoty/blob/main/API/Codebase%20Unification.md)
 
 ## "But Paper/Spigot already do this"
