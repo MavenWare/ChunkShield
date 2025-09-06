@@ -26,10 +26,10 @@ Think of ChunkShield as an extension for Paper/Spigot.
 - No unnecessary or obscure features that inadvertently put your server at risk.
 
 ## Features
-- Limit Certain Blocks within a Chunk.
-- Limit Certain Entities within a Chunk.
-- Limit Certain Named Entities within a Chunk.
+- Limit Certain Blocks / Entities / Named Entities within a Chunk.
 - Radius Limit for Boats/Rafts/Minecarts
+- Alerts for who and where.
+- Togglable checks and conditions.
 - Automatic Protection/Priority over Named Entities.
 - Drop and Go Ready! Default Config does not interfere with vanilla gameplay.
 - Lightweight, all checks are made with performance in mind.
