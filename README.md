@@ -1,7 +1,7 @@
 <img width="1280" height="460" alt="wbjhgb5q6f841 png-720 - Copy" src="https://github.com/user-attachments/assets/fd6a383f-5a11-4607-9a13-ac2552d2c683" />
 
-# Bombastic Projectiles
-Have explosive fun no matter the type of server you host!
+# ChunkShield
+Chunk Protection that limits mobs, named mobs, blocks, entities of your choice.
 
 Drop a ⭐ to support and stay up to date!
 
@@ -12,7 +12,7 @@ Consider [donating](https://ko-fi.com/jammerz), no pressure 🩷
 | :---------:   | :-:  | :-----: |
 | 1.16 - 1.17   | 1.16 |  ⛔ |
 | 1.18 - 1.21.x | 1.18 |  ✅ |
-> Read more on how we update [here.](https://github.com/SintaxLabs/BombasticProjectiles/blob/main/Update%20Structures.md)
+> Read more on how we update [here.](https://github.com/eh-K/Spigoty/blob/main/API/Codebase%20Unification.md)
 
 ## "But Paper/Spigot already do this"
 Think of ChunkShield as an extension for Paper/Spigot. 
