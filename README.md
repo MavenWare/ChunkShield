@@ -1,6 +1,5 @@
-<img width="1280" height="460" alt="wbjhgb5q6f841 png-720 - Copy" src="https://github.com/user-attachments/assets/fd6a383f-5a11-4607-9a13-ac2552d2c683" />
+<img width="1280" height="460" alt="CS-Wallpaper" src="https://github.com/user-attachments/assets/923d1c41-565c-4fc8-9713-67436268654a" />
 
-# ChunkShield
 Chunk Protection that limits mobs, named mobs, blocks, entities of your choice.
 
 Drop a ⭐ to support and stay up to date!
