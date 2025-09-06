@@ -1,0 +1,27 @@
+name: ChunkShield
+version: '1.0.1'
+main: me.sintaxlabs.chunkShield.main
+api-version: '1.16'
+
+commands:
+  reloadconfig:
+    description: Reloads the ChunkShield config
+    usage: /chunkshield <subcommand>
+    aliases: [ chunkshield, cshield ]
+    permission: chunkshield.reload
+  statscommand:
+    description: Checks ChunkShield stats
+    usage: /chunkshield <subcommand>
+    aliases: [ chunkshield, cshield ]
+    permission: chunkshield.info
+
+permissions:
+  chunkShield.reload:
+    description: Allows user to reload the ChunkShield plugin.
+    default: op
+  chunkShield.alerts:
+    description: Allows user to see messages confirming events.
+    default: op
+  chunkShield.info:
+    description: Allows user to see info and stats about ChunkShield.
+    default: op
